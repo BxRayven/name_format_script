@@ -170,7 +170,7 @@ local maxNameLength = 20
 local nameFormat = "%[%d+%]%s[A-Za-z]+%s[A-Za-z]+"
 local bannedWords = {"badword1", "badword2"}
 
-local discordWebhookUrl = "YOUR_DISCORD_WEBHOOK_URL"
+local discordWebhookUrl = Config.discordWebhookUrl
 
 RegisterServerEvent('playerConnecting')
 
