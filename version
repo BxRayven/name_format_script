@@ -1,4 +1,4 @@
-<1.3>
+<1.2.1>
 - Added minNameLength and maxNameLength parameters to allow configuring the minimum and maximum length of player names.
 - Added nameFormat parameter to specify the desired format for player names, providing examples for clarification.
 - Added bannedWords parameter to allow specifying banned words for player names.
