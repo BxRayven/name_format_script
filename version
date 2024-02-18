@@ -3,3 +3,6 @@
 - Added nameFormat parameter to specify the desired format for player names, providing examples for clarification.
 - Added bannedWords parameter to allow specifying banned words for player names.
 - Updated ^8server.lua References to minNameLength, maxNameLength, nameFormat, and bannedWords now come from the Config table in config.lua.
+<1.2.0>
+<1.1.0>
+<1.0.0>
