@@ -52,6 +52,8 @@ local function Changelog()
         if v.Version ~= v.NewestVersion then
             if v.CL then
                 print('^3'..v.Resource:upper()..' - Changelog:')
+                print('^4[WARNING] You are not running the latest version, please update! latest: '..v.NewestVersion..', your version: '..v.Version)
+                print('^0Changes:')
                 print('^4'..v.Changelog)
                 print('')
             end
@@ -124,26 +126,27 @@ local function UpdateChecker(resource)
 end
 
 local function Checker()
-    print('^0--------------------------------------------------------------------')
-    print("^3FiveM Checker - Automatically check update of compatible resources")
-    print('')
+    print("^2[INFO] ^7You are running the latest version.")
     for i, v in pairs(ScriptList) do
-        if string.find(v.NewestVersion, v.Version) then
-            print('^4'..v.Name..' ('..v.Resource..') ^2✓ ' .. 'Up to date - Version ' .. v.Version..'^0')
-        else
-            print('^4'..v.Name..' ('..v.Resource..') ^1✗ ' .. 'Outdated (v'..v.Version..') ^5- Update found: Version ' .. v.NewestVersion .. ' ^3(' .. v.UpdateType .. ') ^0('..v.Github..')')
-        end
-
         if v.CL then
             Changelogs = Changelogs + 1
         end
     end
 
     if Changelogs > 0 then
-        print('^0----------------------------------')
-        Changelog()
+        for i, v in pairs(ScriptList) do
+            if v.Version ~= v.NewestVersion then
+                if v.CL then
+                    print('^3'..v.Resource:upper()..' - Changelog:')
+                    print('^4[WARNING] You are not running the latest version, please update! latest: '..v.NewestVersion..', your version: '..v.Version)
+                    print('^0Changes:')
+                    print('^4'..v.Changelog)
+                    print('')
+                end
+            end
+        end
     else
-        print('^0--------------------------------------------------------------------')
+
     end
 end
 
@@ -165,10 +168,10 @@ end
 
 RegisterCommand('checkupdate', function(source) if source == 0 then CheckForUpdates() end end, false)
 
-local minNameLength = 3
-local maxNameLength = 20
-local nameFormat = "%[%d+%]%s[A-Za-z]+%s[A-Za-z]+"
-local bannedWords = {"badword1", "badword2"}
+local minNameLength = Config.minNameLength
+local maxNameLength = Config.maxNameLength
+local nameFormat = Config.nameFormat
+local bannedWords = Config.bannedWords
 
 local discordWebhookUrl = Config.discordWebhookUrl
 
