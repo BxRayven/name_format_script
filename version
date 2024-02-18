@@ -1,7 +1,10 @@
-<1.3.0>
--Changelog Added minNameLength and maxNameLength parameters to allow configuring the minimum and maximum length of player names.
--Changelog Added nameFormat parameter to specify the desired format for player names, providing examples for clarification.
--Changelog Added bannedWords parameter to allow specifying banned words for player names.
-<1.2.0>
-<1.1.0>
-<1.0.0>
+<1.3>
+- Added minNameLength and maxNameLength parameters to allow configuring the minimum and maximum length of player names.
+- Added nameFormat parameter to specify the desired format for player names, providing examples for clarification.
+- Added bannedWords parameter to allow specifying banned words for player names.
+<1.2>
+- Updated fxmanifest.lua and Added Config.lua file for Discord Webhook
+<1.1>
+- Updated Code Added Discord Logging & Added Blacklisted Words
+<1.0>
+- Initial Release
