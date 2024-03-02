@@ -1,6 +1,6 @@
 local minNameLength = 3
 local maxNameLength = 20
-local nameFormat = "%[%d+%]%s[A-Za-z]+%s[A-Za-z]+"
+local nameFormat = Config.nameFormat
 local bannedWords = {"badword1", "badword2"}
 
 local discordWebhookUrl = Config.discordWebhookUrl
