@@ -1,3 +1,3 @@
 Config = {}
 
-Config.discordWebhookUrl = "YOUR_WEB_HOOK_URL_HERE"
+Config.discordWebhookUrl = "YOUR_DISCORD_WEBHOOK_URL"
